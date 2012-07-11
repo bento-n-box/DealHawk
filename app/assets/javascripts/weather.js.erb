@@ -1,0 +1,21 @@
+$(document).ready(function(){
+var zip = ("<%=  @user_id %>");
+console.log(zip);
+
+
+$('.enterzip').bind('click', function(){
+
+		var zipcodevalue = $val();
+		var callbyzip = "http://i.wxbug.net/REST/Direct/GetForecast.ashx?zip=" + zipcodevalue +"&nf=1&ih=1&ht=t&ht=i&l=en&c=US&api_key=2kkpgx2ybsbmgesdqrc9exnx";
+
+	
+	console.log("button pushed");		
+		$.getJSON(callbyzip, function(weather_item){					
+				var temp = data.forecastList;
+			
+			$('#query').append("<li> Data:"+ temp.dayTitle + "</li>")
+		})
+	
+	});
+	
+});

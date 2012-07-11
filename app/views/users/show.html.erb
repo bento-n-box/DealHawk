@@ -1,0 +1,16 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+
+
+       <div id="zips"><p>Zip is</p></div>
+        <h1><%= @user.name %></h1>
+        <h2><%= @user.zipcode %></h2>
+        <h2><%= @user.email %></h2>
+        <%= image_tag @user.attach.url %>
+		<a href="<%= @user.attach.url %> "><b> File attached </b></a>
+      
+    </section>
+  </aside>
+</div>	
