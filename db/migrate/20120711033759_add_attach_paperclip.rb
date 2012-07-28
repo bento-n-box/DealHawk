@@ -6,7 +6,7 @@
       add_column :users, :attach_updated_at,   :datetime
     end
   
-    def self.down
+   def self.down
      remove_column :users, :attach_file_name
      remove_column :users, :attach_content_type
      remove_column :users, :attach_file_size

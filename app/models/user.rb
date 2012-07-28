@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
     :small  => "150x150>",
     :medium => "300x300>",
     :large =>   "400x400>" }
-    validates_attachment_presence :attach
+   
     has_attached_file :attach
    
 end
