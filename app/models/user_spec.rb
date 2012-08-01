@@ -1,4 +1,4 @@
-1require 'spec_helper'
+require 'spec_helper'
 
 describe User do
 

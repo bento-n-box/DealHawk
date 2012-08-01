@@ -5,6 +5,7 @@ gem 'bootstrap-sass', '2.0.0'
 gem 'bcrypt-ruby', '3.0.1'
 gem "paperclip", "~> 2.3"
 gem "httparty"	
+gem 'json'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'

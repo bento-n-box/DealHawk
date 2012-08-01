@@ -1,4 +1,5 @@
 require 'httparty'
+
 class UsersController < ApplicationController
   
    def new
@@ -10,8 +11,8 @@ class UsersController < ApplicationController
     end
   end
   
-    def create
-    @user = User.new(params[:user])
+  def create
+   	@user = User.new(params[:user])
     if @user.save
    	  session[:user_id] = @user.id
       flash[:success] = "Welcome to DealHawk, you just made an account"
@@ -31,8 +32,10 @@ class UsersController < ApplicationController
 		
 		@deal_data = HTTParty.get(url).parsed_response
 		@deals =  @deal_data["deals"]
-		Rails.logger.debug current_user
+		#Rails.logger.debug current_user
 
+		#@valid_deals = @deals.select { |deal| deal["isNowDeal"] == 'true' }
+		
 		
   		@user = current_user
   		@user_by_zipcode = User.find_all_by_zipcode(params[:zipcode])	 
